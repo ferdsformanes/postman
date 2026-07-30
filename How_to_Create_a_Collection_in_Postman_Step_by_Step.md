@@ -1,7 +1,8 @@
 # How to Create a Collection in Postman (Step-by-Step)
 
-Collections help you organize related API requests into one place. In
-this example, we'll create a collection for **Cisco SD-WAN APIs**.
+Collections help you organize related API requests into one place. Instead of keeping individual requests scattered throughout Postman, you can group them into a collection based on a project, application, or API.
+
+In this example, we'll create a collection for **Cisco SD-WAN APIs**.
 
 ## Step 1: Open Postman
 
@@ -13,108 +14,65 @@ In the left sidebar, click **Collections**.
 
 ## Step 3: Create a New Collection
 
-Click the **+** button next to **Collections**, or click **New** →
-**Collection**.
+Click the **+** button next to **Collections**, or click **New** → **Collection**.
 
 ## Step 4: Name the Collection
 
-Enter a name for your collection.
+Enter a descriptive name for your collection.
 
 **Example:**
 
-``` text
+```text
 Cisco SD-WAN APIs
 ```
+
+Using a clear name makes it easier to identify your collection, especially if you work with multiple APIs.
 
 ## Step 5: Create the Collection
 
 Click **Create**.
 
-Your new collection will appear in the Collections list.
+Your new collection will appear in the **Collections** list.
 
-## Step 6: Add Your First Request
+## Step 6: Verify the Collection
 
-Hover over the **Cisco SD-WAN APIs** collection and click **Add
-request**.
+Expand the collection to confirm it was created successfully.
 
-Name the request:
+At this point, your collection is empty and ready to store API requests.
 
-``` text
-Get Devices
-```
+## Step 7: Rename the Collection (Optional)
 
-Click **Save to Cisco SD-WAN APIs**.
+If you want to change the collection name later:
 
-## Step 7: Configure the Request
+1. Click the **...** (three dots) next to the collection.
+2. Select **Rename**.
+3. Enter the new name.
+4. Press **Enter** or click outside the text box to save the change.
 
-Set the request method to:
+## Step 8: Delete the Collection (Optional)
 
-``` text
-GET
-```
+If you no longer need the collection:
 
-Enter the request URL:
+1. Click the **...** (three dots) next to the collection.
+2. Select **Delete**.
+3. Confirm the deletion.
 
-``` text
-https://<vmanage-ip>/dataservice/device
-```
+> **Note:** Deleting a collection also removes all requests and folders stored inside it.
 
-Replace `<vmanage-ip>` with the hostname or IP address of your Cisco
-SD-WAN vManage server.
+## Why Use Collections?
 
-## Step 8: Save the Request
+Collections help you:
 
-Click **Save**.
-
-The request is now stored inside your **Cisco SD-WAN APIs** collection.
-
-## Step 9: Add Another Request
-
-Click the **...** next to the collection and select **Add request**.
-
-Name it:
-
-``` text
-Get Device Status
-```
-
-Use:
-
-**Method**
-
-``` text
-GET
-```
-
-**URL**
-
-``` text
-https://<vmanage-ip>/dataservice/device/monitor
-```
-
-Click **Save**.
-
-## Step 10: Organize More Requests
-
-Continue adding additional SD-WAN API requests to the collection, such
-as:
-
--   Login
--   Get Devices
--   Get Device Status
--   Get Device Inventory
--   Get Control Connections
--   Get Interfaces
--   Get BFD Sessions
--   Get Device Templates
--   Get Device Template Attachments
-
-As your collection grows, you can also organize requests into folders
-for categories like **Devices**, **Monitoring**, **Templates**, and
-**Policies**.
+* Keep related API requests organized.
+* Group requests by project or application.
+* Share API requests with your team.
+* Export and back up your work.
+* Reuse collections across multiple workspaces.
 
 ## That's It!
 
-You have successfully created a Postman collection and added multiple
-Cisco SD-WAN API requests. Keeping related requests in a collection
-makes them easier to manage, test, and share with your team.
+You have successfully created your first Postman collection.
+
+Your collection is now ready to store API requests for your Cisco SD-WAN environment.
+
+In the next tutorial, we'll learn how to create your first API request inside this collection.
