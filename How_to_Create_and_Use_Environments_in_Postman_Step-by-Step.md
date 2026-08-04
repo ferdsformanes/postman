@@ -1,47 +1,105 @@
-# How to Create and Use Environments in Postman (Step-by-Step)
+# How to Create and Use Environment Variables in Postman (Step-by-Step)
 
-## Step 1: Open Your Workspace
-Open Postman and switch to the workspace where you want to create the environment.
+In this tutorial, you'll create environment variables and use them in your API requests.
 
-## Step 2: Open the Environments Page
-In the left sidebar, click **Environments**.
+---
 
-## Step 3: Create a New Environment
-Click **+** or **Create Environment**.
+## Step 1: Create a New Environment
 
-## Step 4: Enter an Environment Name
-Give your environment a descriptive name, such as:
-- Development
-- Testing
-- Production
+1. Under **Environments**, click **New Environment**.
+2. Name it:
+   ```
+   Cisco SD-WAN Sandbox
+   ```
+3. Add these variables:
 
-## Step 5: Add Variables
-Create the variables you need.
+| Variable | Value |
+|----------|-------|
+| base_url | https://sandbox-sdwan-2.cisco.com |
+| username | devnetuser |
+| password | RG!_Yw919_83 |
 
-| Variable | Initial Value | Current Value |
-|----------|---------------|---------------|
-| `base_url` | `https://jsonplaceholder.typicode.com` | `https://jsonplaceholder.typicode.com` |
+4. Click **Save**.
 
-You can add more variables later, such as API keys or tokens.
+---
 
-## Step 6: Save the Environment
+## Step 2: Select the Environment
+
+From the Environment dropdown in the top-right corner, select:
+
+```
+Cisco SD-WAN Sandbox
+```
+
+---
+
+## Step 3: Update the Login Request
+
+Replace the URL:
+
+**Before**
+```
+https://sandbox-sdwan-2.cisco.com/j_security_check
+```
+
+**After**
+```
+{{base_url}}/j_security_check
+```
+
+Keep the Body as **x-www-form-urlencoded** and replace the hard-coded values:
+
+**Before**
+```
+j_username = devnetuser
+j_password = RG!_Yw919_83
+```
+
+**After**
+```
+j_username = {{username}}
+j_password = {{password}}
+```
+
 Click **Save**.
 
-## Step 7: Select the Environment
-Use the environment dropdown in the top-right corner and choose the environment you just created.
+---
 
-## Step 8: Use Environment Variables
-Reference variables in your requests using double curly braces:
+## Step 4: Update the Get Devices Request
+
+Replace the URL:
+
+**Before**
+```
+https://sandbox-sdwan-2.cisco.com/dataservice/device
+```
+
+**After**
+```
+{{base_url}}/dataservice/device
+```
+
+Click **Save**.
+
+---
+
+## Step 5: Test the Requests
+
+1. Send the **Login** request.
+2. Send the **Get Devices** request.
+
+Both requests should work exactly as before.
+
+---
+
+## What Happened?
+
+Instead of hard-coding the server URL and login credentials, you stored them as environment variables:
 
 ```
-{{base_url}}/posts
+{{base_url}}
+{{username}}
+{{password}}
 ```
 
-Postman replaces `{{base_url}}` with the value from the selected environment.
-
-## What You Learned
-
-- Create a new environment
-- Add environment variables
-- Select an environment
-- Use variables in API requests
+Postman automatically replaces these variables with their values from the active environment. If the server URL or credentials change, simply update the environment variables instead of editing every request.
