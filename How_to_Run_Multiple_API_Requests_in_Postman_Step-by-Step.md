@@ -1,21 +1,21 @@
-# How to Run a Collection in Postman (Step-by-Step)
+# How to Run Multiple API Requests in Postman (Step-by-Step)
 
 ## Step 1
 Open your collection and click **Run**.
 
 ## Step 2
-Select these requests:
+Select the requests to run:
 - ✅ Login
 - ✅ Get Devices
 
 ## Step 3
-Use these settings:
+Configure the run:
 - **Run type:** Functional
 - **Run method:** Local
 - **Iterations:** 1
 
 ## Step 4
-Enable:
+Enable these settings:
 - ✅ Persist responses for a session
 - ✅ Stop run if an error occurs
 - ✅ Keep variable values
@@ -25,8 +25,8 @@ Enable:
 Click **Start run**.
 
 ## Step 6
-Verify:
+Verify the results:
 - ✅ Login → Status **200**
 - ✅ Get Devices → Status **200**
 
-> **Note:** Postman runs requests in the order they appear in the collection. The **Login** request runs first, allowing **Get Devices** to automatically use the **JSESSIONID** cookie.
+> **Note:** Postman runs requests sequentially, following the order they appear in the collection. In this example, the **Login** request runs first, allowing **Get Devices** to automatically use the **JSESSIONID** cookie.
