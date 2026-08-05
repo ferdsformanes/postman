@@ -1,0 +1,8 @@
+host-name,system-ip,site-id,site-name,device-model,personality,version,reachability,controlConnections,bfdSessions,state
+Manager01,100.0.0.1,100,SITE_100,vmanage,vmanage,20.18.2.1,reachable,6,,green
+Controller01,100.0.0.101,100,SITE_100,vsmart,vsmart,20.18.2.1,reachable,11,,green
+Validator01,100.0.0.201,100,SITE_100,vedge-cloud,vbond,20.18.2.1,reachable,18,,green
+Edge1,10.0.0.1,1,SITE_1,vedge-C8000V,vedge,17.18.01a.0.182,reachable,3,6,green
+Edge2,10.0.0.2,2,SITE_2,vedge-C8000V,vedge,17.18.01a.0.182,reachable,3,6,green
+Edge3,10.0.0.3,3,SITE_3,vedge-C8000V,vedge,17.18.01a.0.182,reachable,3,6,green
+Edge4,10.0.0.4,4,SITE_4,vedge-C8000V,vedge,17.18.01a.0.182,reachable,3,6,green
