@@ -1,0 +1,57 @@
+{
+  "info": {
+    "_postman_id": "d3347d84-77de-452e-9a1a-7a26cfc417ee",
+    "name": "Cisco DevNet Sandbox ACI APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "34605785"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"aaaUser\": {\r\n    \"attributes\": {\r\n      \"name\": \"admin\",\r\n      \"pwd\": \"!v3G@!4@Y\"\r\n    }\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/aaaLogin.json",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "aaaLogin.json"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get ACI Devices",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/node/class/fabricNode.json",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "node",
+            "class",
+            "fabricNode.json"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
